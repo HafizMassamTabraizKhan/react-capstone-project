@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/Gill\ Sans.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #4369b2 !important;
+  font-family: 'CustomFont', sans-serif !important;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 10%;
+  color: #fff;
+}
+
+nav h2 {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
