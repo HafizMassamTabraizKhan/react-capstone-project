@@ -9,6 +9,16 @@ export const fetchProducts = createAsyncThunk(
   },
 );
 
+export const fetchProductById = createAsyncThunk(
+  'products/fetchProductById',
+  async (productId) => {
+    const response = await axios.get(
+      `https://fakestoreapi.com/products/${productId}`,
+    );
+    return response.data;
+  },
+);
+
 export const productsSlice = createSlice({
   name: 'products',
   initialState: {
@@ -17,7 +27,11 @@ export const productsSlice = createSlice({
     status: 'idle',
     error: null,
   },
-  reducers: {},
+  reducers: {
+    removeSelectedProduct: (state) => {
+      state.selectedProduct = null;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
@@ -31,8 +45,22 @@ export const productsSlice = createSlice({
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
+      })
+      .addCase(fetchProductById.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(fetchProductById.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.selectedProduct = action.payload;
+      })
+      .addCase(fetchProductById.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
       });
   },
 });
+
+export const { removeSelectedProduct } = productsSlice.actions;
 
 export default productsSlice.reducer;
