@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Products />} />
-        <Route path="/product" element={<ProductDetails />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
         <Route>404 Not Found!</Route>
       </Routes>
     </>
