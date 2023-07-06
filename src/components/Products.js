@@ -7,29 +7,14 @@ import { fetchProducts } from '../redux/products/productsSlice';
 function Products() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
-  const status = useSelector((state) => state.products.status);
-  const error = useSelector((state) => state.products.error);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
-
-  if (status === 'failed') {
-    return (
-      <div>
-        Error:
-        {error}
-      </div>
-    );
-  }
-
   return (
-    <>
+    <div data-testid="productsPage">
       <div className="search">
         <input
           className="input"
@@ -70,7 +55,7 @@ function Products() {
             ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

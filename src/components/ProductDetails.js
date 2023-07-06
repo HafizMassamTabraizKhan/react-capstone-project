@@ -35,7 +35,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="product-details">
+    <div className="product-details" data-testid="productDetailPage">
       <Link className="links" to="/">
         <h2>Back to Home</h2>
       </Link>

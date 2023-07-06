@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetails renders correctly 1`] = `
+<div
+  className="product-details"
+  data-testid="productDetailPage"
+>
+  <a
+    className="links"
+    href="/"
+    onClick={[Function]}
+  >
+    <h2>
+      Back to Home
+    </h2>
+  </a>
+  <div>
+    Product not found.
+  </div>
+</div>
+`;
