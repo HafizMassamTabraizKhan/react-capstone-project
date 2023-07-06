@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Products from './components/Products';
 import ProductDetails from './components/ProductDetails';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
