@@ -150,7 +150,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-- [[App Link](https://spacetravelers-vp0l.onrender.com/)]
+- [[App Link](https://ecommerce-shop-csp8.onrender.com/)]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
