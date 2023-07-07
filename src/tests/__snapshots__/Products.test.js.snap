@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check any changes to the component 1`] = `
+<div
+  data-testid="productsPage"
+>
+  <div
+    className="search"
+  >
+    <input
+      className="input"
+      onChange={[Function]}
+      placeholder="Search by category"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="products-container"
+  >
+    <div
+      className="products-grid"
+    />
+  </div>
+</div>
+`;
